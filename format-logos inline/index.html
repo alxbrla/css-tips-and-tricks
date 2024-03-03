@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to deal with logos</title>
+</head>
+
+<body>
+    <main>
+        <div class="container basic">
+            <img src="public/amazon.png" alt="amazon" class="logo">
+            <img src="public/diner_lady.png" alt="diner lady" class="logo">
+            <img src="public/lego.png" alt="lego" class="logo">
+            <img src="public/nba.jpeg" alt="nba" class="logo">
+            <img src="public/nespresso.png" alt="nespresso" class="logo">
+            <img src="public/nike.png" alt="nike" class="logo">
+        </div>
+        <div class="container">
+            <img src="public/amazon.png" alt="amazon" class="logo">
+            <img src="public/diner_lady.png" alt="diner lady" class="logo">
+            <img src="public/lego.png" alt="lego" class="logo">
+            <img src="public/nba.jpeg" alt="nba" class="logo">
+            <img src="public/nespresso.png" alt="nespresso" class="logo">
+            <img src="public/nike.png" alt="nike" class="logo">
+        </div>
+    </main>
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+
+            padding: 1rem;
+        }
+
+        .basic>.logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .container:not(.basic)>.logo {
+            width: 15%;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+            mix-blend-mode: color-burn;
+        }
+    </style>
+</body>
+
+</html>
